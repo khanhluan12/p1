@@ -16,6 +16,10 @@ app.use(express.urlencoded({ extended: true }));
 // Set view engine
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+app.get('/', (req, res) => {
+  res.redirect('/login');
+});
+
 app.use('/', uiRoutes); 
 // Routes
 const authRoutes = require('./routes/authRoutes');
