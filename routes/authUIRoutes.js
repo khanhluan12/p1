@@ -5,7 +5,7 @@ const registrationController = require('../controllers/registrationController');
 const { authMiddleware, adminMiddleware } = require('../auth/authMiddleware');
 
 
-router.get('/login', (req, res) => {
+router.get('/', (req, res) => {
   res.render('login', { error: null });
 });
 
